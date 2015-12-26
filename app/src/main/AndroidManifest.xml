@@ -19,12 +19,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".views.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LoadActivity"
+            android:name=".views.LoadActivity"
             android:label="@string/title_activity_load"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.CandidatesActivity"
+            android:label="@string/title_activity_candidates"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
