@@ -6,5 +6,5 @@ package zm.hashcode.pvtdroid.domain;
 public class PollingStation {
     private String id;
     private String locationId;
-    
+
 }
