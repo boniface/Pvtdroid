@@ -22,7 +22,7 @@
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="214dp">
 
         <LinearLayout
             android:id="@+id/email_login_form"
@@ -64,6 +64,12 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activate Account"
+                android:id="@+id/button2" />
+
+            <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
@@ -74,4 +80,11 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Phone"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
