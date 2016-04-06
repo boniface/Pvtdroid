@@ -20,10 +20,6 @@ public class SettingsRespositoryImpl extends SQLiteOpenHelper implements Setting
     public static final int DATABASE_VERSION = 1;
     private SQLiteDatabase db;
 
-    private String orgId;
-    private String emailAddress;
-    private String password;
-
     public static final String COLUMN_ORGID = "orgId";
     public static final String COLUMN_EMAIL_ADDRESS = "emailaddress";
     public static final String COLUMN_PASSWORD = "passwd";
@@ -87,7 +83,6 @@ public class SettingsRespositoryImpl extends SQLiteOpenHelper implements Setting
                 null,
                 null,
                 null);
-
         if(cursor!=null)
             cursor.moveToFirst();
 
@@ -95,7 +90,7 @@ public class SettingsRespositoryImpl extends SQLiteOpenHelper implements Setting
         settings.setOrgId(cursor.getString(0));
         settings.setEmailAddress(cursor.getString(1));
         settings.setPassword(cursor.getString(2));
-        
+
         return settings;
     }
 
@@ -116,7 +111,7 @@ public class SettingsRespositoryImpl extends SQLiteOpenHelper implements Setting
     public void delete(Settings settings) {
         db.delete(
                 TABLE_SETTINGS,
-                COLUMN_PASSWORD + "=?",
+                COLUMN_ORGID + "=?",
                 new String[]{String.valueOf(settings.getOrgId())});
 
     }
